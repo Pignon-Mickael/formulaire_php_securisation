@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/style.css'>
+</head>
+
+
+<body>
+   
+<header>
+    
+</header>
+      
+<form  action="thanks.php" method="post">
+    <div>
+      <label  for="nom">Nom :</label>
+      <input  type="text"  id="nom"  name="nom" required>
+    </div>
+
+    <div>
+      <label  for="prenom">Prénom :</label>
+      <input  type="text"  id="prenom"  name="prenom" required>
+    </div>
+
+    <div>
+      <label  for="email">E-mail :</label>
+        <input  type="email"  id="email"  name="email" required>
+      
+      <?php
+        filter_var('bobexemple@exemple.com', FILTER_VALIDATE_EMAIL);
+      ?>
+
+    </div>
+
+    <div>
+      <label  for="tel">Téléphone :</label>
+        <input  type="tel"  id="tel"  name="tel" required>
+    </div>
+
+    <div>
+    <label for="sujet">Sujet :</label>
+        <select name="sujet" id="sujet" required>
+            <option value="information">Information</option>
+            <option value="devis">Devis</option>
+            <option value="rdv">Rendez-vous</option>
+            <option value="sav">SAV</option>
+        </select>
+    </div>
+
+    <div>
+      <label  for="message">Message :</label>
+      <textarea  id="message"  name="message" required></textarea>
+    </div>
+
+    <div  class="button">
+      <button  type="submit">Envoyer votre message</button>
+    </div>
+</form>
+
+</body>
+</html>
+
+
+
